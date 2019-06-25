@@ -15,6 +15,7 @@
 		7BACA63B22C209DF00021118 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BACA63A22C209DF00021118 /* main.m */; };
 		7BACA64522C209DF00021118 /* flsTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BACA64422C209DF00021118 /* flsTestTests.m */; };
 		7BACA65022C209DF00021118 /* flsTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BACA64F22C209DF00021118 /* flsTestUITests.m */; };
+		7BACA66E22C2195E00021118 /* libSmartPlayerSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BACA66D22C2195E00021118 /* libSmartPlayerSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7BACA64B22C209DF00021118 /* flsTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flsTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BACA64F22C209DF00021118 /* flsTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = flsTestUITests.m; sourceTree = "<group>"; };
 		7BACA65122C209DF00021118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BACA66D22C2195E00021118 /* libSmartPlayerSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSmartPlayerSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BACA66E22C2195E00021118 /* libSmartPlayerSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +109,7 @@
 				7BACA62E22C209C800021118 /* ViewController.h */,
 				7BACA62F22C209C800021118 /* ViewController.m */,
 				7BACA63122C209C900021118 /* Main.storyboard */,
+				7BACA66B22C2195E00021118 /* daniuliveSDK */,
 				7BACA63422C209DF00021118 /* Assets.xcassets */,
 				7BACA63622C209DF00021118 /* LaunchScreen.storyboard */,
 				7BACA63922C209DF00021118 /* Info.plist */,
@@ -130,6 +134,22 @@
 				7BACA65122C209DF00021118 /* Info.plist */,
 			);
 			path = flsTestUITests;
+			sourceTree = "<group>";
+		};
+		7BACA66B22C2195E00021118 /* daniuliveSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7BACA66C22C2195E00021118 /* libs */,
+			);
+			path = daniuliveSDK;
+			sourceTree = "<group>";
+		};
+		7BACA66C22C2195E00021118 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				7BACA66D22C2195E00021118 /* libSmartPlayerSDK.a */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +462,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/flsTest/daniuliveSDK/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.s.flsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,6 +482,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/flsTest/daniuliveSDK/libs",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.s.flsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
